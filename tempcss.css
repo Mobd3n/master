@@ -1,0 +1,949 @@
+/* Variable definitions
+   ====================
+<Variable name="maincolor" description="اللون الأساسي" type="color" default="#E74C3C" value="#E74C3C"/>
+
+<Variable name="subucolor" description="لون فرعي" type="color" default="#CF1500" value="#CF1500"/>
+
+*/
+#layout #headads {width: 708px;}
+.blog-feeds,.post-feeds,#headads h2,#drop a::after,.date-header,.mbdnnav, .mbdnnav2 {display:none;}
+body {
+  background: rgba(0, 0, 0, 0) url("https://lh3.googleusercontent.com/-8b1kS9qnwLY/Vf6la1DEzWI/AAAAAAAAFtU/JE_BZ1xs1qo/s150-Ic42/pat-10.png") repeat scroll 0 0;
+  font: 14px droid arabic kufi;
+  color:#444;
+  margin: 0;
+  padding: 0;
+}
+a{color:$(subucolor);text-decoration: none; transition: all 0.7s ease 0s;}
+a:hover{color:#444;}
+#container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 20px auto;
+  position: relative;
+  width: 980px;
+}
+/*القائمة العلوية*/
+#main-menu {
+  border-bottom: 1px dashed #ddd;
+  height: 30px;
+  width: 100%;
+}
+.menu {
+  float: right;
+  list-style: outside none none;
+  margin: 0 8px 0 0;
+  padding: 0;
+}
+.menu li {float: right;}
+.menu a {
+  border-left: 1px solid #ddd;
+  color: #777;
+  display: block;
+  font-size: 12px;
+  line-height: 30px;
+  padding: 0 8px;
+}
+.menu a:hover {color:$(subucolor);border-top:1px solid #E74C3C;} 
+/*الازرار الإجتماعية*/
+.tosos {
+float: left;
+line-height: 32px;
+list-style: outside none none;
+margin: 0;
+padding: 0;
+background-color: $(maincolor);
+}
+.tosos li {float: left;}
+.tosos a {
+color: #eee;
+display: block;
+font-size: 18px;
+height: 32px;
+line-height: 32px;
+text-align: center;
+width: 32px;
+}
+.tosos .fa.fa-facebook:hover {background-color:#4867AA;}
+.tosos .fa.fa-twitter:hover {background-color:#2BA8E0;}
+.tosos .fa.fa-google-plus:hover {background-color:#DD4B38;}
+.tosos .fa.fa-tumblr:hover {background-color:#395976;}
+.tosos .fa.fa-pinterest:hover {background-color:#CB2027;}
+.tosos .fa.fa-youtube-play:hover {background-color:#C8302A;}
+/*منطقة الهيدر*/
+#header-wrapper {
+  min-height: 145px;
+  padding: 0 5px;
+}
+#header {
+  float: right;
+  width: 240px;
+}
+#headads {
+  float: left;
+  height: 90px;
+  margin-top: 25px;
+  width: 728px;
+}
+#header-inner img {
+  height: auto;
+  margin-top: 25px;
+  max-width: 100%;
+}
+/*القائمة السفلية*/
+#b-Menu {
+  background-color: $(maincolor);
+  height: 38px;
+}
+#b-Menu .fa.fa-home {
+  color: #fff;
+  float: right;
+  font-size: 32px;
+  line-height: 38px;
+  padding: 0 8px;
+}
+#b-Menu .fa.fa-home:hover {
+  background: #000;
+  float: right;
+  font-size: 32px;
+  line-height: 38px;
+  padding: 0 8px;
+}
+.bottomenu {
+  float: right;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.bottomenu li {float: right;}
+.bottomenu a {
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  line-height: 38px;
+  padding: 0 10px;
+}
+.bottomenu a:hover{background:#444;}
+#sub a::after {
+  content:"\f0d7";
+  float: left;
+  font: 15px/38px fontawesome;
+  margin-right: 2px;
+  margin-top: 2px;
+}
+#sub a {cursor: default;}
+#drop {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 999;
+}
+#sub:hover #drop {
+  display: block;
+}
+#drop li {
+  float: none;
+  list-style: outside none none;
+}
+#drop a {
+  background-color: #444;
+  border-bottom: 1px solid #555;
+  cursor: pointer;
+  display: block;
+  line-height: 25px;
+  margin: 0;
+  padding: 0 5px 5px;
+  width: 140px;
+}
+#drop a:hover{background-color: $(maincolor); color:#fff;}
+ /*محرك البحث*/
+#shbtn {position: absolute; visibility: hidden;}
+#search {left: 0; position: absolute;}
+#shbtn + label span::before {
+color: #fff;
+content:"\f002";
+cursor: pointer;
+display: block;
+float:left;
+font: 20px/40px fontawesome;
+height: 38px;
+text-align: center;
+padding-left:5px;
+}
+#search-text {
+background-color: #444444;
+border: 0 none;
+color: #eee;
+float: left;
+font: 15px "droid arabic kufi",georgia;
+height: 38px;
+padding: 0 5px;
+transition: all 0.2s ease 0s;
+visibility: hidden;
+width: 0;
+}
+#shbtn:checked + label span::before {content: "\f00d"; background-color: #444444;}
+#shbtn:checked ~ #search-text{visibility: visible; width: 140px;}
+/*منطقة المواضيع*/
+#outer-wrapper {padding: 20px 5px;}
+#main-wrapper {
+  float: right;
+  width: 650px;
+}
+.post.hentry {
+  box-shadow: 0 0 0 1px #ddd inset;
+  display: block;
+  font: 0px "droid arabic kufi",georgia
+  margin-bottom: 10px;
+  padding: 0 8px 1px;
+  position: relative;
+}
+.post-title {
+  border-bottom: 1px solid #ddd !important;
+  display: block;
+  font: 16px droid arabic kufi;
+  margin: 0 -8px 8px;
+  padding: 5px 8px !important;
+}
+.post h2 {
+    background-color: #E74C3C;
+    border: 1px dashed #fff;
+    box-shadow: 0 0 0 4px #E74C3C;
+    color: #fff;
+    display: block;
+    font-weight: normal;
+    min-height: 40px;
+    line-height: 40px;
+    margin: 20px 5px;
+    padding: 0 10px;
+}
+.post h3 {
+  border-bottom: 1px dashed #bbb;
+  font: 16px droid arabic kufi,Lobster;
+  padding: 8px 0;
+}
+.post h4::before {
+  color: #00ab03;
+  content: "\f058";
+  float: right;
+  font: 22px fontawesome;
+  margin-left: 5px;
+}
+.post h4 {
+  color: #666;
+  font: bold 13px droid arabic kufi;
+  text-align: right !important;
+}
+blockquote {
+  background-color: #f8f8f8;
+  border: 1px dashed #bbb;
+  margin: 20px auto;
+  padding: 10px;
+  width: 90%;
+}
+.post ol{
+counter-reset:li;
+list-style: none;
+*list-style: decimal;
+margin-right:0;
+padding-right:0
+}
+.post ol li{
+position:relative;
+margin:0 15px 20px 0 !important;
+padding:4px 10px 4px 5px !important;
+list-style:none;
+*list-style: decimal;
+border-bottom:1px solid #e2e3e2;
+background:#f2f2f2;
+text-indent:14px;
+font-family: droid arabic kufi,Lobster;
+}
+.post ol li:before {
+  background:#E74C3C;
+  color: #fff;
+  content: counter(li, decimal);
+  counter-increment: li;
+  font: bold 14px serif;
+  margin: 0 0 10px;
+  padding: 5px 3px !important;
+  position: absolute;
+  right: -9px;
+  text-align: right;
+  text-indent: 6px;
+  top: -5px;
+  width: 20px;
+}
+.post ol li:after {
+  border-color: transparent #E74C3C transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0 0;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 17px;
+  top: -5px;
+  width: 0;
+}
+.post img {max-width: 96%;}
+.posts-thumb img {
+  border: 1px solid #ddd;
+  max-width: 100% !important;
+  padding: 2px;
+  transition: all 0.7s ease 0s;
+}
+.posts-thumb img:hover {opacity: 0.7;}
+.summary {font: 14px/1.8em tahoma;height: 155px; overflow: hidden;}
+/*معلومات الموضوع*/
+#footinfo {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  font-family: droid arabic kufi;
+  height: 30px;
+  line-height: 30px;
+  margin: 20px -7px 0;
+}
+#footinfo .post-comment-link {
+  float: right;
+  margin-right: 5px;
+}
+#footinfo .comment-link::before {
+  content: "\f086";
+  font: 16px fontawesome;
+}
+#footinfo .ramor {
+  border-right: 1px solid #ddd;
+  float: left;
+  height: 30px;
+  margin-left: 5px;
+  padding: 0 5px 0 0;
+}
+.pincel {left: 4px;position: absolute;top: 0;}
+/*أيقونات المشاركة*/
+.sharefot {
+  border-right: 1px solid #ddd;
+  float: left;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.sharefot li {float: left;}
+.sharefot li a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 24px;
+}
+/*معلومات داخلية*/
+#post-info {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  margin: 20px -7px 0;
+  padding: 4px 0;
+}
+#post-info .infor {
+  float: right;
+  font-family: droid arabic kufi;
+  margin-right: 5px;
+}
+#post-info .sharebuttons {float: left; margin-left: 5px;}
+#post-info .sharebuttons a {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+  width: 100px !important;
+}
+#post-info .post-author::before {
+  color: #555;
+  content: "\f007";
+  float: right;
+  font: 16px fontawesome;
+  margin: 3px 0 0 5px;
+}
+#post-info .post-author span {float: right;}
+#post-info .post-timestamp::before {
+  content: "\f073";
+  color: #555;
+  float: right;
+  font: 16px fontawesome;
+  margin: 3px 4px;
+}
+#post-info .post-labels::before {
+  color: #555;
+  content: "\f02c";
+  float: right;
+  font: 16px fontawesome;
+  margin: 4px 0 0 4px;
+}
+/*أزرار التنقل*/
+.cnmu-pager {
+  background-color: #444;
+  list-style: outside none none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.cnmu-pager li {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+  transition: all 0.7s ease 0s;
+}
+.cnmu-pager li:hover{background-color:$(maincolor);}
+.next {box-shadow: 0 1px 0 1px #fff; float: right;}
+.cnmu-pager .previous {float: left;text-align: left;}
+.cnmu-pager a, .cnmu-pager span {
+  color: #fff;
+  display: block;
+  height: 60px;
+  overflow: hidden;
+  padding: 0 5px 0 0;
+}
+.cnmu-pager .previous a, .cnmu-pager .previous span {padding-left:20px !important;}
+.cnmu-pager .next a, .cnmu-pager .next span {padding-right:20px !important;}
+.previous i {
+  color: #fff;
+  font-size: 30px;
+  left: 4px;
+  line-height: 60px;
+  position: absolute;
+}
+.next i {
+  color: #fff;
+  font-size: 30px;
+  line-height: 60px;
+  position: absolute;
+  right: 4px;
+}
+/*مواضيع ذات صلة*/
+#related-posts {
+  border: 1px solid #ddd;
+  margin: 0 0 10px;
+  padding: 0 0 5px;
+}
+#related-posts h3 {
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 5px;
+}
+#related-posts ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 8px;
+}
+#related-posts a::before {
+  content: "\f006";
+  float: right;
+  font: 16px fontawesome;
+  margin: 4px 0 0 5px;
+  color:#444;
+}
+#related-posts a {
+  display: block;
+  float: right;
+  width: 100%;
+}
+/*التعليقات*/
+.comments {
+  box-shadow: 0 0 0 1px #ddd inset;
+  clear: both;
+  margin: 0;
+  padding: 0 8px;
+}
+#comments h4::before {
+  color: #fff;
+  content: "\f086";
+  float: right;
+  font: 26px fontawesome;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#comments h4 {
+  background-color: $(maincolor);
+  color: #fff;
+  font-size: 15px;
+  height: 34px;
+  line-height: 34px;
+  margin: 0 -8px;
+  padding: 0;
+}
+.comment-header {
+  background-color: #f1f1f1;
+  display: block;
+  float: right;
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  width: 100%;
+}
+.blog-author a::after {
+  background-color: #444;
+  color: #fff;
+  content: "مشرف";
+  display: inline-block;
+  margin-right: 5px;
+  padding: 0 5px;
+}
+.thread-chrome.thread-expanded {
+  border: 1px dashed #ddd;
+  margin-top: 5px;
+  padding: 0 5px !important;
+}
+.datetime.secondary-text {float: left; margin-left: 4px;}
+.user {float: right; margin-right: 4px;}
+.comment-content {font: 13px tahoma;}
+.comment-actions {font-size: 12px;}
+/*التبويبات*/
+.cnmusidebartabs {margin-bottom: 20px;}
+.cnmusidebartabs .widget {
+border-color: #D03E2F;
+border-style: solid;
+border-width: 0 0 4px !important;
+box-shadow: 0 0 0 1px #ddd inset;
+box-sizing: border-box;
+float: right;
+overflow: hidden;
+padding: 5px;
+width: 100%;
+}
+.cnmusidebartabs .widget h2 {display: none;}
+.tabs-widget {
+border-bottom: 4px solid $(subucolor);
+float: right;
+height: 40px;
+list-style: outside none none;
+margin: 0;
+padding: 0;
+width: 100%;
+}
+.tabs-widget li {
+float:right;
+list-style: outside none none;
+padding: 0;
+text-align: center;
+width: 33.3%;
+}
+#cnmustab2 {float:left;}
+#cnmustab2 a {border-left: 0 none;}
+.tabs-widget li:first-child {margin: 0}
+.tabs-widget li a {
+background-color: #eee;
+color: #444;
+display: block;
+font-size: 13px;
+height: 40px;
+line-height: 40px;
+position: relative;
+text-transform: uppercase;
+}
+.tabs-widget li a:hover {color:#000;}
+.tabs-widget li a.tabs-widget-current {
+background-color: $(maincolor);
+color:#fff;
+text-decoration: none;
+}
+#cnmustab1 a::before {
+content: "\f004";
+float: right;
+font: 18px/42px fontawesome;
+margin: 0 5px 0 0;
+position: absolute;
+right: 0;
+}
+#cnmustab3 a::before {
+content: "\f005";
+float: right;
+font: 18px/42px fontawesome;
+margin: 0 5px 0 0;
+position: absolute;
+right: 0;
+}
+#cnmustab2 a::before {
+content: "\f086";
+float: right;
+font: 18px/42px fontawesome;
+margin: 0 5px 0 0;
+position: absolute;
+right: 0;
+}
+/*السايدبار*/
+#sidebar-wrapper {
+  float: left;
+  width: 310px;
+}
+#sidebar .widget {
+  background-color: #f8f8f8;
+  box-shadow: 0 0 0 1px #ddd inset;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 0 5px 10px;
+}
+#sidebar h2 {
+  background-color: $(maincolor);
+  color: #fff;
+  font: 15px/34px droid arabic kufi;
+  height: 34px;
+  margin: 0 -5px 8px;
+  text-align: center;
+}
+/*مشاركات شائعة*/
+.popular-posts ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.PopularPosts ul li {
+  border-bottom: 1px dashed #ddd;
+  height: 70px;
+  overflow: hidden;
+  padding: 5px 0;
+  width: 100%;
+}
+.PopularPosts .item-title {font-size: 13px; padding: 0;font-family: droid arabic kufi,Lobster;}
+.PopularPosts .item-thumbnail {
+  float: right;
+  margin: 0 0 5px 5px;
+}
+.PopularPosts .item-thumbnail img {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  height: 60px;
+  padding: 3px;
+  width: 66px;
+}
+.popular-posts .item-snippet {display: none;}
+/*الأرشيف*/
+.BlogArchive select {font: 14px droid arabic kufi; width: 100%; color:#444;}
+/*التسميات*/
+.Label ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.Label li a::before,.Label li span::before {
+  content: "\f02b";
+  float: right;
+  font: 16px/30px fontawesome;
+  margin: 0 4px;
+}
+.Label li a,.Label li span {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: block;
+  float: right;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 3px 5px;
+  width: 47%;
+}
+.Label li span {color:#444 !important;}
+/*الترقيم*/
+.showpageOf {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #ddd inset;
+  display: inline-block;
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 1px;
+  padding: 0 5px;
+}
+.pagecurrent {
+  background-color: $(maincolor);
+  color: #fff;
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 1px;
+  text-align: center;
+  width: 30px;
+}
+.displaypageNum a {
+  background-color: #f8f8f8;
+  box-shadow: 0 0 0 1px #ddd inset;
+  display: inline-block;
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 1px;
+  text-align: center;
+  width: 30px;
+}
+.firstpage,.lastpage,.prevnav ,.nextpage {display:none;}
+.noqat1,.noqat2 {float: right;}
+.displaypageNum a:hover{background-color:#444; color:#fff;}
+/*الفوتر*/
+#footer-wrapper {
+  background-color:#F8F8F8;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+}
+#footer-wrapper .section {
+  float: right;
+  margin: 0 13px;
+  width: 300px;
+  margin-bottom:10px;
+}
+#footer-wrapper h2 {
+  border-bottom: 1px solid $(maincolor);
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 8px;
+  padding: 0 0 4px;
+}
+#credit {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  display: block;
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+}
+/*قائمة الروابط*/
+.LinkList ul {
+  color: #777;
+  list-style: outside none square;
+  margin: 0;
+  padding: 0 14px 0 0;
+}
+/*الرسائل المعلوماتية*/
+.status-msg-wrap {font-size: 13px;margin: 0 auto 10px; width: 100%;}
+.status-msg-border {border: 1px solid #ddd; opacity: 1;}
+.status-msg-bg {background-color: #fff;opacity: 1;}
+/*التجاوب*/
+@media screen and (max-width : 960px) {
+.bottomenu, .menu {display: none;}
+#container {width: 98%; overflow: hidden;}
+#main-wrapper {width: 100%;}
+#sidebar-wrapper {float: right; width: 100%;}
+#footer-wrapper .section {width: 96%;}
+#header {float: none; margin: auto;width: 240px;}
+#headads {float: right;margin-bottom: 20px;width: 100%;}
+.mbdnnav, .mbdnnav2 {display:block;}
+.mbdnnav, .mbdnnav2 {
+  color: #444;
+  display: block;
+  float: right;
+  font: 12px droid arabic kufi;
+  width: 100px;
+}
+#mbdnnav1 {margin: 2px 2px 0 0;}
+#mbdnnav2 {margin: 6px 5px 0;}
+}
+@media screen and (max-width : 520px){
+.posts-thumb {float: none !important;}
+.posts-thumb img {height: 180px; width: 100%; padding:0;}
+.summary {height: auto;text-align: center;}
+}
+
+
+
+
+
+.LinkList ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.LinkList ul li {
+  margin: 0;
+  padding: 0;
+}
+.LinkList li a {
+  background-color: #444444;
+  box-shadow: 0 1px 0 4px #fff;
+  color: #fff;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.7s ease 0s;
+}
+.LinkList li a:hover {background-color: #fc5400;}
+
+
+.item-control.blog-admin {display: none !important;}
+
+
+
+
+
+:-moz-selection { 
+
+Background: #D06B6B; 
+
+color: #FFFFFF; 
+
+ text-shadow: none;
+
+} 
+
+::selection { 
+
+background: #D06B6B; 
+
+color: #FFFFFF; 
+
+ text-shadow: none;
+
+}
+
+
+
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background-color:#FFFFFF;border-left:1px solid #B5B5B5}
+::-webkit-scrollbar-thumb{background-color:#E74C3C}
+::-webkit-scrollbar-thumb:hover{background-color:#aaa}
+
+
+
+
+@-webkit-keyframes zoomInUp{0%{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,1000px,0);transform:scale3d(.1,.1,.1) translate3d(0,1000px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}@keyframes zoomInUp{0%{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,1000px,0);-ms-transform:scale3d(.1,.1,.1) translate3d(0,1000px,0);transform:scale3d(.1,.1,.1) translate3d(0,1000px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);-ms-transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}.zoomInUp{-webkit-animation-name:zoomInUp;animation-name:zoomInUp} .animated { -webkit-animation-duration: 0.6s; animation-duration: 0.6s; -webkit-animation-fill-mode: both; animation-fill-mode: both; } .animated.infinite { -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; } .animated.hinge { -webkit-animation-duration: 0.6s; animation-duration: 0.6s; }
+
+
+
+
+
+
+
+/*Smile*/
+.cnmu-smilet {
+  background: url("https://lh4.googleusercontent.com/-b9XQATW9z_g/UwYbrkQLHoI/AAAAAAAADb0/y0NaaxW9mWQ/s3512/smily.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0) !important;
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 20px;
+  font: bold 16px arial;
+  direction: ltr;
+}
+.cnmu-smilet:hover {cursor: default;}
+.cnmu-smilet:hover:after {
+  background: #fff;
+  border: 2px solid #0062C4;
+  border-radius: 100%;
+  bottom: 26px;
+  color: #000;
+  content: attr(title);
+  direction: ltr !important;
+  display: inline-block;
+  font: bold 16px arial;
+  left: 20%;
+  padding: 5px 1px;
+  position: absolute;
+  text-align: center;
+  width: 30px;
+  z-index: 98;
+}
+
+#threaded-comment-form p, .comment-form p {text-align: center !important;}
+
+
+ /*CsS ButtonS DabouR PhonE*/.demo::before,.download::before {background-color: #444;color:#fff;font: 30px/42px fontawesome;height: 0;overflow: hidden;position: absolute;right: 0;text-align: center;transition: all 0.7s ease 0s;width: 100%;}.demo::before {content: "\f06e";}.download::before {content: "\f019";}.demo:hover::before,.download:hover::before {height: 40px;}.demo,.download {border: 1px solid #fff;box-shadow: 0 1px 1px 1px #444;color: #fff;display: inline-block;font-weight: bold;height: 40px;line-height: 40px;position: relative;text-align: center;width: 200px;margin:10px 5px;}.demo {background-color: #fc5400;}.download {background-color: #0081E4;}
+
+
+
+
+
+
+/*تنسيقات*/
+mobd3::after,qaz::after {
+background-color: #fff;
+color: #444444;
+content: "\f002";
+float: right;
+font: 16px fontawesome;
+height: 20px;
+margin-left: 5px;
+padding-left: 2px;
+text-align: center;
+width: 20px;
+}
+mobd3,qaz {
+background-color: #333;
+border: 2px solid #fff;
+box-shadow: 0 1px 1px 2px #000;
+color: #ffd600;
+direction: ltr;
+display: inline-block;
+font: bold 13px/18px arial;
+height: 20px;
+margin: 10px 5px;
+padding-left: 5px;
+text-align: center;
+}
+strikk,wsx{
+border:1px solid gray;
+font:1.2em arial;
+display: inline-block;
+box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #cccccc, 0 2px 0 3px #444444;
+border-radius:3px;
+margin:10px 5px;
+padding:1px 5px;
+direction: ltr !important;
+text-align: center;
+}
+strikl {
+background-color: #333;
+color: #fff;
+direction: ltr;
+display: inline-block;
+margin: 5px;
+padding: 0 5px;
+}
+/*تنسيقات*/
+mobd3ar::after,qaz::after {
+background-color: #fff;
+color: #444444;
+content: "\f002";
+float: right;
+font: 16px fontawesome;
+height: 20px;
+margin-left: 5px;
+padding-left: 2px;
+text-align: center;
+width: 20px;
+}
+mobd3ar,qaz {
+background-color: #333;
+border: 2px solid #fff;
+box-shadow: 0 1px 1px 2px #000;
+color: #ffd600;
+direction: ltr;
+display: inline-block;
+font: bold 13px/18px Droid Arabic kufi;
+height: 20px;
+margin: 10px 5px;
+padding-left: 5px;
+text-align: center;
+}
+strikk,wsx{
+border:1px solid gray;
+font:1.2em arial;
+display: inline-block;
+box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #cccccc, 0 2px 0 3px #444444;
+border-radius:3px;
+margin:10px 5px;
+padding:1px 5px;
+direction: ltr !important;
+text-align: center;
+}
+strikl {
+background-color: #333;
+color: #fff;
+direction: ltr;
+display: inline-block;
+margin: 5px;
+padding: 0 5px;
+}
